@@ -8,18 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		4BB3BAFE2B5056F600A75DF2 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 4BB3BAFD2B5056F600A75DF2 /* ComposableArchitecture */; };
+		4BB3BB002B50579900A75DF2 /* AppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB3BAFF2B50579900A75DF2 /* AppView.swift */; };
+		4BB3BB022B5057CE00A75DF2 /* AppReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB3BB012B5057CE00A75DF2 /* AppReducer.swift */; };
 		4BB3BB152B505F9000A75DF2 /* swiftgen.yml in Resources */ = {isa = PBXBuildFile; fileRef = 4BB3BB142B505F9000A75DF2 /* swiftgen.yml */; };
 		4BECD3162B504ED50075BB51 /* TempediaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BECD3152B504ED50075BB51 /* TempediaApp.swift */; };
-		4BECD3182B504ED50075BB51 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BECD3172B504ED50075BB51 /* ContentView.swift */; };
 		4BECD31A2B504ED70075BB51 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4BECD3192B504ED70075BB51 /* Assets.xcassets */; };
 		4BECD31D2B504ED70075BB51 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4BECD31C2B504ED70075BB51 /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4BB3BAFF2B50579900A75DF2 /* AppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppView.swift; sourceTree = "<group>"; };
+		4BB3BB012B5057CE00A75DF2 /* AppReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppReducer.swift; sourceTree = "<group>"; };
 		4BB3BB142B505F9000A75DF2 /* swiftgen.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = swiftgen.yml; sourceTree = SOURCE_ROOT; };
 		4BECD3122B504ED50075BB51 /* Tempedia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tempedia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BECD3152B504ED50075BB51 /* TempediaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempediaApp.swift; sourceTree = "<group>"; };
-		4BECD3172B504ED50075BB51 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		4BECD3192B504ED70075BB51 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4BECD31C2B504ED70075BB51 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -57,7 +59,8 @@
 			children = (
 				4BB3BB142B505F9000A75DF2 /* swiftgen.yml */,
 				4BECD3152B504ED50075BB51 /* TempediaApp.swift */,
-				4BECD3172B504ED50075BB51 /* ContentView.swift */,
+				4BB3BB012B5057CE00A75DF2 /* AppReducer.swift */,
+				4BB3BAFF2B50579900A75DF2 /* AppView.swift */,
 				4BECD3192B504ED70075BB51 /* Assets.xcassets */,
 				4BECD31B2B504ED70075BB51 /* Preview Content */,
 			);
@@ -153,8 +156,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4BECD3182B504ED50075BB51 /* ContentView.swift in Sources */,
+				4BB3BB022B5057CE00A75DF2 /* AppReducer.swift in Sources */,
 				4BECD3162B504ED50075BB51 /* TempediaApp.swift in Sources */,
+				4BB3BB002B50579900A75DF2 /* AppView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
