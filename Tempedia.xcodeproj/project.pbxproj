@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4BB3BAFE2B5056F600A75DF2 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 4BB3BAFD2B5056F600A75DF2 /* ComposableArchitecture */; };
 		4BECD3162B504ED50075BB51 /* TempediaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BECD3152B504ED50075BB51 /* TempediaApp.swift */; };
 		4BECD3182B504ED50075BB51 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BECD3172B504ED50075BB51 /* ContentView.swift */; };
 		4BECD31A2B504ED70075BB51 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4BECD3192B504ED70075BB51 /* Assets.xcassets */; };
@@ -26,6 +27,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4BB3BAFE2B5056F600A75DF2 /* ComposableArchitecture in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +87,7 @@
 			);
 			name = Tempedia;
 			packageProductDependencies = (
+				4BB3BAFD2B5056F600A75DF2 /* ComposableArchitecture */,
 			);
 			productName = Tempedia;
 			productReference = 4BECD3122B504ED50075BB51 /* Tempedia.app */;
@@ -116,6 +119,7 @@
 			mainGroup = 4BECD3092B504ED50075BB51;
 			packageReferences = (
 				4BB3BAF92B50558900A75DF2 /* XCRemoteSwiftPackageReference "SwiftLint" */,
+				4BB3BAFC2B5056F600A75DF2 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
 			);
 			productRefGroup = 4BECD3132B504ED50075BB51 /* Products */;
 			projectDirPath = "";
@@ -371,6 +375,14 @@
 				minimumVersion = 0.54.0;
 			};
 		};
+		4BB3BAFC2B5056F600A75DF2 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-composable-architecture";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.6.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -378,6 +390,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 4BB3BAF92B50558900A75DF2 /* XCRemoteSwiftPackageReference "SwiftLint" */;
 			productName = "plugin:SwiftLintPlugin";
+		};
+		4BB3BAFD2B5056F600A75DF2 /* ComposableArchitecture */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4BB3BAFC2B5056F600A75DF2 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
+			productName = ComposableArchitecture;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
