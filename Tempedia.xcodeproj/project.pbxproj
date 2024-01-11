@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4BB3BAFE2B5056F600A75DF2 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 4BB3BAFD2B5056F600A75DF2 /* ComposableArchitecture */; };
+		4BB3BB152B505F9000A75DF2 /* swiftgen.yml in Resources */ = {isa = PBXBuildFile; fileRef = 4BB3BB142B505F9000A75DF2 /* swiftgen.yml */; };
 		4BECD3162B504ED50075BB51 /* TempediaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BECD3152B504ED50075BB51 /* TempediaApp.swift */; };
 		4BECD3182B504ED50075BB51 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BECD3172B504ED50075BB51 /* ContentView.swift */; };
 		4BECD31A2B504ED70075BB51 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4BECD3192B504ED70075BB51 /* Assets.xcassets */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4BB3BB142B505F9000A75DF2 /* swiftgen.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = swiftgen.yml; sourceTree = SOURCE_ROOT; };
 		4BECD3122B504ED50075BB51 /* Tempedia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tempedia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BECD3152B504ED50075BB51 /* TempediaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempediaApp.swift; sourceTree = "<group>"; };
 		4BECD3172B504ED50075BB51 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -53,6 +55,7 @@
 		4BECD3142B504ED50075BB51 /* Tempedia */ = {
 			isa = PBXGroup;
 			children = (
+				4BB3BB142B505F9000A75DF2 /* swiftgen.yml */,
 				4BECD3152B504ED50075BB51 /* TempediaApp.swift */,
 				4BECD3172B504ED50075BB51 /* ContentView.swift */,
 				4BECD3192B504ED70075BB51 /* Assets.xcassets */,
@@ -83,6 +86,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				4BADED2C2B50A3AB00E7D428 /* PBXTargetDependency */,
 				4BB3BAFB2B50559B00A75DF2 /* PBXTargetDependency */,
 			);
 			name = Tempedia;
@@ -120,6 +124,7 @@
 			packageReferences = (
 				4BB3BAF92B50558900A75DF2 /* XCRemoteSwiftPackageReference "SwiftLint" */,
 				4BB3BAFC2B5056F600A75DF2 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
+				4BADED2A2B50A3A100E7D428 /* XCRemoteSwiftPackageReference "SwiftGenPlugin" */,
 			);
 			productRefGroup = 4BECD3132B504ED50075BB51 /* Products */;
 			projectDirPath = "";
@@ -137,6 +142,7 @@
 			files = (
 				4BECD31D2B504ED70075BB51 /* Preview Assets.xcassets in Resources */,
 				4BECD31A2B504ED70075BB51 /* Assets.xcassets in Resources */,
+				4BB3BB152B505F9000A75DF2 /* swiftgen.yml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -155,6 +161,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		4BADED2C2B50A3AB00E7D428 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = 4BADED2B2B50A3AB00E7D428 /* SwiftGenPlugin */;
+		};
 		4BB3BAFB2B50559B00A75DF2 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			productRef = 4BB3BAFA2B50559B00A75DF2 /* SwiftLintPlugin */;
@@ -367,6 +377,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		4BADED2A2B50A3A100E7D428 /* XCRemoteSwiftPackageReference "SwiftGenPlugin" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/BookBeat/SwiftGenPlugin";
+			requirement = {
+				branch = "xcodeproject-support";
+				kind = branch;
+			};
+		};
 		4BB3BAF92B50558900A75DF2 /* XCRemoteSwiftPackageReference "SwiftLint" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/realm/SwiftLint";
@@ -386,6 +404,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		4BADED2B2B50A3AB00E7D428 /* SwiftGenPlugin */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4BADED2A2B50A3A100E7D428 /* XCRemoteSwiftPackageReference "SwiftGenPlugin" */;
+			productName = "plugin:SwiftGenPlugin";
+		};
 		4BB3BAFA2B50559B00A75DF2 /* SwiftLintPlugin */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 4BB3BAF92B50558900A75DF2 /* XCRemoteSwiftPackageReference "SwiftLint" */;
