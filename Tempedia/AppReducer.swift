@@ -7,19 +7,26 @@
 
 import ComposableArchitecture
 
-struct AppReducer: Reducer {
-    struct State { }
+@Reducer
+struct AppReducer {
+    struct State {
+        var home = HomeReducer.State()
+    }
 
     enum Action {
-        case mainNavigation
+        case home(HomeReducer.Action)
     }
 
     var body: some Reducer<State, Action> {
         Reduce { _, action in
             switch action {
-            case .mainNavigation:
+            case .home:
                 return .none
             }
+        }
+
+        Scope(state: \.home, action: /Action.home) {
+            HomeReducer()
         }
     }
 }

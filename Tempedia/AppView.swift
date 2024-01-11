@@ -17,10 +17,9 @@ struct AppView {
 
 extension AppView: View {
     var body: some View {
-        VStack {
-            Spacer()
-            Text("Hello World")
-            Spacer()
-        }
+        HomeView(store: store.scope(
+            state: \.home,
+            action: AppReducer.Action.home
+        ))
     }
 }

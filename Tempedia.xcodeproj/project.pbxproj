@@ -7,6 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4BADED302B50A4EB00E7D428 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BADED2F2B50A4EB00E7D428 /* HomeView.swift */; };
+		4BADED322B50A50700E7D428 /* HomeReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BADED312B50A50700E7D428 /* HomeReducer.swift */; };
+		4BADED352B50AEAF00E7D428 /* TemtemListReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BADED342B50AEAF00E7D428 /* TemtemListReducer.swift */; };
+		4BADED372B50B0CE00E7D428 /* TemtemListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BADED362B50B0CE00E7D428 /* TemtemListView.swift */; };
+		4BADED3D2B50B4D900E7D428 /* ItemsListReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BADED3C2B50B4D900E7D428 /* ItemsListReducer.swift */; };
+		4BADED3F2B50B4E400E7D428 /* ItemsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BADED3E2B50B4E400E7D428 /* ItemsListView.swift */; };
+		4BADED412B50B4FA00E7D428 /* MovesListReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BADED402B50B4FA00E7D428 /* MovesListReducer.swift */; };
+		4BADED432B50B50200E7D428 /* MovesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BADED422B50B50200E7D428 /* MovesListView.swift */; };
+		4BADED452B50B50E00E7D428 /* TechniquesListReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BADED442B50B50E00E7D428 /* TechniquesListReducer.swift */; };
+		4BADED472B50B51A00E7D428 /* TechniquesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BADED462B50B51A00E7D428 /* TechniquesListView.swift */; };
+		4BADED492B50B52400E7D428 /* TypesListReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BADED482B50B52400E7D428 /* TypesListReducer.swift */; };
+		4BADED4B2B50B52D00E7D428 /* TypesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BADED4A2B50B52D00E7D428 /* TypesListView.swift */; };
 		4BB3BAFE2B5056F600A75DF2 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 4BB3BAFD2B5056F600A75DF2 /* ComposableArchitecture */; };
 		4BB3BB002B50579900A75DF2 /* AppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB3BAFF2B50579900A75DF2 /* AppView.swift */; };
 		4BB3BB022B5057CE00A75DF2 /* AppReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB3BB012B5057CE00A75DF2 /* AppReducer.swift */; };
@@ -17,6 +29,18 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4BADED2F2B50A4EB00E7D428 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		4BADED312B50A50700E7D428 /* HomeReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeReducer.swift; sourceTree = "<group>"; };
+		4BADED342B50AEAF00E7D428 /* TemtemListReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemtemListReducer.swift; sourceTree = "<group>"; };
+		4BADED362B50B0CE00E7D428 /* TemtemListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemtemListView.swift; sourceTree = "<group>"; };
+		4BADED3C2B50B4D900E7D428 /* ItemsListReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsListReducer.swift; sourceTree = "<group>"; };
+		4BADED3E2B50B4E400E7D428 /* ItemsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsListView.swift; sourceTree = "<group>"; };
+		4BADED402B50B4FA00E7D428 /* MovesListReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovesListReducer.swift; sourceTree = "<group>"; };
+		4BADED422B50B50200E7D428 /* MovesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovesListView.swift; sourceTree = "<group>"; };
+		4BADED442B50B50E00E7D428 /* TechniquesListReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TechniquesListReducer.swift; sourceTree = "<group>"; };
+		4BADED462B50B51A00E7D428 /* TechniquesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TechniquesListView.swift; sourceTree = "<group>"; };
+		4BADED482B50B52400E7D428 /* TypesListReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypesListReducer.swift; sourceTree = "<group>"; };
+		4BADED4A2B50B52D00E7D428 /* TypesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypesListView.swift; sourceTree = "<group>"; };
 		4BB3BAFF2B50579900A75DF2 /* AppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppView.swift; sourceTree = "<group>"; };
 		4BB3BB012B5057CE00A75DF2 /* AppReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppReducer.swift; sourceTree = "<group>"; };
 		4BB3BB142B505F9000A75DF2 /* swiftgen.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = swiftgen.yml; sourceTree = SOURCE_ROOT; };
@@ -38,6 +62,73 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4BADED2D2B50A42300E7D428 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				4BADED2E2B50A43200E7D428 /* Views */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		4BADED2E2B50A43200E7D428 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4BADED312B50A50700E7D428 /* HomeReducer.swift */,
+				4BADED2F2B50A4EB00E7D428 /* HomeView.swift */,
+				4BADED332B50AE8900E7D428 /* TemtemList */,
+				4BADED382B50B47E00E7D428 /* ItemsList */,
+				4BADED392B50B48C00E7D428 /* MovesList */,
+				4BADED3A2B50B4B200E7D428 /* TechniquesList */,
+				4BADED3B2B50B4BC00E7D428 /* TypesList */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		4BADED332B50AE8900E7D428 /* TemtemList */ = {
+			isa = PBXGroup;
+			children = (
+				4BADED342B50AEAF00E7D428 /* TemtemListReducer.swift */,
+				4BADED362B50B0CE00E7D428 /* TemtemListView.swift */,
+			);
+			path = TemtemList;
+			sourceTree = "<group>";
+		};
+		4BADED382B50B47E00E7D428 /* ItemsList */ = {
+			isa = PBXGroup;
+			children = (
+				4BADED3C2B50B4D900E7D428 /* ItemsListReducer.swift */,
+				4BADED3E2B50B4E400E7D428 /* ItemsListView.swift */,
+			);
+			path = ItemsList;
+			sourceTree = "<group>";
+		};
+		4BADED392B50B48C00E7D428 /* MovesList */ = {
+			isa = PBXGroup;
+			children = (
+				4BADED402B50B4FA00E7D428 /* MovesListReducer.swift */,
+				4BADED422B50B50200E7D428 /* MovesListView.swift */,
+			);
+			path = MovesList;
+			sourceTree = "<group>";
+		};
+		4BADED3A2B50B4B200E7D428 /* TechniquesList */ = {
+			isa = PBXGroup;
+			children = (
+				4BADED442B50B50E00E7D428 /* TechniquesListReducer.swift */,
+				4BADED462B50B51A00E7D428 /* TechniquesListView.swift */,
+			);
+			path = TechniquesList;
+			sourceTree = "<group>";
+		};
+		4BADED3B2B50B4BC00E7D428 /* TypesList */ = {
+			isa = PBXGroup;
+			children = (
+				4BADED482B50B52400E7D428 /* TypesListReducer.swift */,
+				4BADED4A2B50B52D00E7D428 /* TypesListView.swift */,
+			);
+			path = TypesList;
+			sourceTree = "<group>";
+		};
 		4BECD3092B504ED50075BB51 = {
 			isa = PBXGroup;
 			children = (
@@ -57,11 +148,12 @@
 		4BECD3142B504ED50075BB51 /* Tempedia */ = {
 			isa = PBXGroup;
 			children = (
-				4BB3BB142B505F9000A75DF2 /* swiftgen.yml */,
 				4BECD3152B504ED50075BB51 /* TempediaApp.swift */,
 				4BB3BB012B5057CE00A75DF2 /* AppReducer.swift */,
 				4BB3BAFF2B50579900A75DF2 /* AppView.swift */,
+				4BB3BB142B505F9000A75DF2 /* swiftgen.yml */,
 				4BECD3192B504ED70075BB51 /* Assets.xcassets */,
+				4BADED2D2B50A42300E7D428 /* Source */,
 				4BECD31B2B504ED70075BB51 /* Preview Content */,
 			);
 			path = Tempedia;
@@ -156,9 +248,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4BADED472B50B51A00E7D428 /* TechniquesListView.swift in Sources */,
+				4BADED372B50B0CE00E7D428 /* TemtemListView.swift in Sources */,
+				4BADED3F2B50B4E400E7D428 /* ItemsListView.swift in Sources */,
+				4BADED3D2B50B4D900E7D428 /* ItemsListReducer.swift in Sources */,
 				4BB3BB022B5057CE00A75DF2 /* AppReducer.swift in Sources */,
 				4BECD3162B504ED50075BB51 /* TempediaApp.swift in Sources */,
+				4BADED322B50A50700E7D428 /* HomeReducer.swift in Sources */,
+				4BADED302B50A4EB00E7D428 /* HomeView.swift in Sources */,
+				4BADED352B50AEAF00E7D428 /* TemtemListReducer.swift in Sources */,
 				4BB3BB002B50579900A75DF2 /* AppView.swift in Sources */,
+				4BADED4B2B50B52D00E7D428 /* TypesListView.swift in Sources */,
+				4BADED452B50B50E00E7D428 /* TechniquesListReducer.swift in Sources */,
+				4BADED432B50B50200E7D428 /* MovesListView.swift in Sources */,
+				4BADED492B50B52400E7D428 /* TypesListReducer.swift in Sources */,
+				4BADED412B50B4FA00E7D428 /* MovesListReducer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
