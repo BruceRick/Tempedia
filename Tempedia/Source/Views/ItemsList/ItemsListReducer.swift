@@ -9,18 +9,18 @@ import ComposableArchitecture
 
 @Reducer
 struct ItemsListReducer {
-  struct State: Codable, Equatable, Hashable { }
+    struct State: Codable, Equatable, Hashable { }
 
-  enum Action {
-      case onAppear
-  }
-
-  var body: some Reducer<State, Action> {
-    Reduce { _, action in
-      switch action {
-      default:
-          return .none
-      }
+    enum Action {
+        case onAppear
     }
-  }
+
+    var body: some Reducer<State, Action> {
+        Reduce { _, action in
+            switch action {
+            default:
+                return .none
+            }
+        }
+    }
 }

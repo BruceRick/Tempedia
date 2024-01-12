@@ -27,12 +27,15 @@ struct HomeReducer {
                 }
             }
         }
+        .forEach(\.path, action: \.path) {
+            HomePathReducer()
+        }
     }
 }
 
 @Reducer
 struct HomePathReducer {
-    enum State: Codable, Equatable, Hashable {
+    enum State: Equatable {
         case temtemList(TemtemListReducer.State = .init())
         case itemsList(ItemsListReducer.State = .init())
         case movesList(MovesListReducer.State = .init())
