@@ -9,18 +9,36 @@ import ComposableArchitecture
 import SwiftUI
 
 struct AppView {
-    typealias State = AppReducer.State
-    typealias Action = AppReducer.Action
+    let store: StoreOf<AppReducer>
+    @ObservedObject var viewStore: ViewStoreOf<AppReducer>
+    @Environment(\.horizontalSizeClass) var sizeClass
 
-    var store: StoreOf<AppReducer>
+    init(store: StoreOf<AppReducer>) {
+        self.store = store
+        self.viewStore = ViewStore(store, observe: { $0 })
+    }
 }
 
 extension AppView: View {
     var body: some View {
-        HomeView(store: store.scope(
-            state: \.home,
-            action: AppReducer.Action.home
-        ))
+        Group {
+            switch viewStore.typesNetworkState {
+            case .notStarted, .loading:
+                VStack {
+                    Spacer()
+                    ProgressView()
+                    Spacer()
+                }
+            default:
+                HomeView(store: store.scope(
+                    state: \.home,
+                    action: AppReducer.Action.home
+                ))
+            }
+        }
+        .onAppear {
+            viewStore.send(.onAppear, animation: .default)
+        }
     }
 }
 

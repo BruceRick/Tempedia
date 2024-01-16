@@ -10,6 +10,9 @@
 		4B15936E2B51CBA800E8AB18 /* Formatters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B15936D2B51CBA800E8AB18 /* Formatters.swift */; };
 		4B1593702B51D62800E8AB18 /* MockAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B15936F2B51D62800E8AB18 /* MockAPI.swift */; };
 		4B1593722B51D6E300E8AB18 /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B1593712B51D6E300E8AB18 /* MockData.swift */; };
+		4B1593742B51E25400E8AB18 /* Type.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B1593732B51E25400E8AB18 /* Type.swift */; };
+		4B1593762B55D2B200E8AB18 /* TemtemImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B1593752B55D2B200E8AB18 /* TemtemImages.swift */; };
+		4B1593792B55D9A100E8AB18 /* TemtemImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B1593782B55D9A100E8AB18 /* TemtemImageView.swift */; };
 		4BADED302B50A4EB00E7D428 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BADED2F2B50A4EB00E7D428 /* HomeView.swift */; };
 		4BADED322B50A50700E7D428 /* HomeReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BADED312B50A50700E7D428 /* HomeReducer.swift */; };
 		4BADED352B50AEAF00E7D428 /* TemtemListReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BADED342B50AEAF00E7D428 /* TemtemListReducer.swift */; };
@@ -43,6 +46,9 @@
 		4B15936D2B51CBA800E8AB18 /* Formatters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Formatters.swift; sourceTree = "<group>"; };
 		4B15936F2B51D62800E8AB18 /* MockAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAPI.swift; sourceTree = "<group>"; };
 		4B1593712B51D6E300E8AB18 /* MockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
+		4B1593732B51E25400E8AB18 /* Type.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Type.swift; sourceTree = "<group>"; };
+		4B1593752B55D2B200E8AB18 /* TemtemImages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemtemImages.swift; sourceTree = "<group>"; };
+		4B1593782B55D9A100E8AB18 /* TemtemImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemtemImageView.swift; sourceTree = "<group>"; };
 		4BADED2F2B50A4EB00E7D428 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		4BADED312B50A50700E7D428 /* HomeReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeReducer.swift; sourceTree = "<group>"; };
 		4BADED342B50AEAF00E7D428 /* TemtemListReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemtemListReducer.swift; sourceTree = "<group>"; };
@@ -92,6 +98,14 @@
 			path = Logic;
 			sourceTree = "<group>";
 		};
+		4B1593772B55D98300E8AB18 /* TemtemImage */ = {
+			isa = PBXGroup;
+			children = (
+				4B1593782B55D9A100E8AB18 /* TemtemImageView.swift */,
+			);
+			path = TemtemImage;
+			sourceTree = "<group>";
+		};
 		4BADED2D2B50A42300E7D428 /* Source */ = {
 			isa = PBXGroup;
 			children = (
@@ -114,6 +128,7 @@
 				4BADED392B50B48C00E7D428 /* MovesList */,
 				4BADED3A2B50B4B200E7D428 /* TechniquesList */,
 				4BADED3B2B50B4BC00E7D428 /* TypesList */,
+				4B1593772B55D98300E8AB18 /* TemtemImage */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -214,6 +229,8 @@
 			isa = PBXGroup;
 			children = (
 				4BADED5C2B51B94300E7D428 /* Temtem.swift */,
+				4B1593732B51E25400E8AB18 /* Type.swift */,
+				4B1593752B55D2B200E8AB18 /* TemtemImages.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -356,13 +373,16 @@
 				4BADED432B50B50200E7D428 /* MovesListView.swift in Sources */,
 				4BADED492B50B52400E7D428 /* TypesListReducer.swift in Sources */,
 				4BADED542B51B61B00E7D428 /* NetworkState.swift in Sources */,
+				4B1593792B55D9A100E8AB18 /* TemtemImageView.swift in Sources */,
 				4BADED502B51B55600E7D428 /* API.swift in Sources */,
 				4BADED522B51B60800E7D428 /* Endpoint.swift in Sources */,
 				4BADED5D2B51B94300E7D428 /* Temtem.swift in Sources */,
 				4BADED5A2B51B83400E7D428 /* Storage.swift in Sources */,
+				4B1593762B55D2B200E8AB18 /* TemtemImages.swift in Sources */,
 				4BADED612B51BE6700E7D428 /* StorageDependency.swift in Sources */,
 				4B1593702B51D62800E8AB18 /* MockAPI.swift in Sources */,
 				4BADED412B50B4FA00E7D428 /* MovesListReducer.swift in Sources */,
+				4B1593742B51E25400E8AB18 /* Type.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

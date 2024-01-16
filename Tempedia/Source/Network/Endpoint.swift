@@ -9,11 +9,17 @@ import Foundation
 
 public enum Endpoint {
     case temtems
+    case types
+    case image(String)
 
     var path: String {
         switch self {
         case .temtems:
-            return "/temtems"
+            return "/api/temtems"
+        case .types:
+            return "/api/types"
+        case .image(let path):
+            return path
         }
     }
 

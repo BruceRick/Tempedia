@@ -14,7 +14,7 @@ struct MockAPI: API {
     static func request<T>(endpoint: Endpoint) async throws -> (data: T, response: URLResponse) where T: Decodable {
         try await Task.sleep(nanoseconds: throttleDurationNanosecond)
 
-        guard let url = URL(string: Self.baseURLString + endpoint.path) else {
+        guard let url = fullURL(endpoint: endpoint) else {
             throw APIError.invalidURL
         }
 
@@ -27,6 +27,19 @@ struct MockAPI: API {
                             expectedContentLength: 100,
                             textEncodingName: "MockTextEndcoding"))
     }
+
+    static func requestImageData(endpoint: Endpoint) async throws -> (data: Data, response: URLResponse) {
+        try await Task.sleep(nanoseconds: throttleDurationNanosecond)
+
+        guard let url = fullURL(endpoint: endpoint) else {
+            throw APIError.invalidURL
+        }
+
+        return (Data(), .init(url: url,
+                              mimeType: "mockMIME",
+                              expectedContentLength: 100,
+                              textEncodingName: "MockTextEndcoding"))
+    }
 }
 
 private extension Endpoint {
@@ -34,6 +47,10 @@ private extension Endpoint {
         switch self {
         case .temtems:
             return MockData.temtems
+        case .types:
+            return MockData.types
+        case .image:
+            return MockData.image
         }
     }
 }

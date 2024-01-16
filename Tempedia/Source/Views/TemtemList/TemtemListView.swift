@@ -31,6 +31,17 @@ extension TemtemListView: View {
         }
         .navigationTitle("Temtem")
         .onAppear { viewStore.send(.onAppear, animation: .default) }
+        .toolbar {
+            Button {
+                viewStore.send(.loadTemtem, animation: .default)
+            } label: {
+                HStack(spacing: 5) {
+                    Image(systemName: "square.and.arrow.down")
+                        .font(.system(size: 16, weight: .medium))
+                    Text("Update")
+                }
+            }
+        }
     }
 
     @ViewBuilder
@@ -48,7 +59,22 @@ extension TemtemListView: View {
             ForEach(viewStore.temtems) { temtem in
                 HStack {
                     Text("#\(temtem.formattedNumber)")
+                        .frame(minWidth: 50)
+                    TemtemImageView(temtem: temtem)
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: 30, height: 30)
                     Text(temtem.name)
+                    Spacer()
+                    ForEach(temtem.types, id: \.self) { type in
+                        if let data = viewStore.typeIcons[type],
+                           let image = UIImage(data: data) {
+                            Image(uiImage: image)
+                                .resizable()
+                                .frame(width: 30, height: 30)
+                        } else {
+                            Text(type)
+                        }
+                    }
                 }
             }
         }

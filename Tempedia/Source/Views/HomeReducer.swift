@@ -9,7 +9,7 @@ import ComposableArchitecture
 
 @Reducer
 struct HomeReducer {
-    struct State {
+    struct State: Equatable {
         var path = StackState<HomePathReducer.State>()
     }
 

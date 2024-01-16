@@ -10,6 +10,9 @@ import Foundation
 struct Storage {
     enum Key: String {
         case temtem
+        case types
+        case typeImages
+        case temtemImages
     }
 
     static let defaults = UserDefaults.standard
@@ -32,9 +35,24 @@ struct Storage {
 }
 
 extension Storage {
-    static var temtem: [Temtem] = get(.temtem) ?? []
+    static func saveTypeImage(type: String, data: Data) {
+        var storedTypeImages: [String: Data] = get(.typeImages) ?? [:]
+        storedTypeImages[type] = data
+        set(storedTypeImages, key: .typeImages)
+    }
 
-    static func saveTemtem(data: [Temtem]) {
-        set(data, key: .temtem)
+    static func saveTemtemImages(_ temtemImages: TemtemImages) {
+        var allStoredTemtemImages: [TemtemImages] = get(.temtemImages) ?? []
+        var storedTemtemImages = allStoredTemtemImages.first { $0.name == temtemImages.name }
+
+        if var storedTemtemImages {
+            storedTemtemImages.icon = temtemImages.icon
+            storedTemtemImages.render = temtemImages.render
+            storedTemtemImages.renderWiki = temtemImages.renderWiki
+        } else {
+            allStoredTemtemImages.append(temtemImages)
+        }
+
+        set(allStoredTemtemImages, key: .temtemImages)
     }
 }

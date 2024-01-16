@@ -13,6 +13,7 @@ struct TemtemListReducer {
     struct State: Equatable {
         var networkState: NetworkState = .notStarted
         var temtems: [Temtem] = []
+        var typeIcons: [String: Data] = [:]
     }
 
     enum Action {
@@ -30,7 +31,10 @@ struct TemtemListReducer {
         Reduce { state, action in
             switch action {
             case .onAppear:
-                if state.networkState == .notStarted {
+                state.typeIcons = storage.getTypeImages()
+                state.temtems = storage.getTemtem()
+                state.networkState = state.temtems.isEmpty ? state.networkState : .cached
+                if state.temtems.isEmpty {
                     return .send(.loadTemtem, animation: .default)
                 }
 

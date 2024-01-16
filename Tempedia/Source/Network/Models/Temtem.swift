@@ -12,4 +12,9 @@ public struct Temtem: Codable, Equatable, Identifiable {
 
     let number: Int
     let name: String
+    let types: [String]
+    let wikiUrl: String
+    let icon: String
+    let wikiRenderStaticUrl: String
+    let renderStaticImage: String
 }
