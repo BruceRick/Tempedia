@@ -42,6 +42,7 @@ extension TemtemListView: View {
                 }
             }
         }
+        .searchable(text: viewStore.$searchText, placement: .navigationBarDrawer(displayMode: .always))
     }
 
     @ViewBuilder
@@ -56,7 +57,7 @@ extension TemtemListView: View {
 
     var listTemtems: some View {
         List {
-            ForEach(viewStore.temtems) { temtem in
+            ForEach(viewStore.filteredTemtems) { temtem in
                 HStack {
                     Text("#\(temtem.formattedNumber)")
                         .frame(minWidth: 50)

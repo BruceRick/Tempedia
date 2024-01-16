@@ -14,12 +14,22 @@ struct TemtemListReducer {
         var networkState: NetworkState = .notStarted
         var temtems: [Temtem] = []
         var typeIcons: [String: Data] = [:]
+        @BindingState var searchText: String = ""
+
+        var filteredTemtems: [Temtem] {
+            if searchText.isEmpty {
+                return temtems
+            } else {
+                return temtems.filter { $0.name.contains(searchText) }
+            }
+        }
     }
 
-    enum Action {
+    enum Action: BindableAction {
         case onAppear
         case loadTemtem
         case loadTemtemResponse(TaskResult<(data: [Temtem], response: URLResponse)>)
+        case binding(BindingAction<State>)
     }
 
     @Dependency(\.network.api) var api
@@ -28,6 +38,7 @@ struct TemtemListReducer {
     enum CancelID { case loadTemtem }
 
     var body: some Reducer<State, Action> {
+        BindingReducer()
         Reduce { state, action in
             switch action {
             case .onAppear:
@@ -60,6 +71,9 @@ struct TemtemListReducer {
             case .loadTemtemResponse(.failure):
                 state.temtems = storage.getTemtem()
                 state.networkState = state.temtems.isEmpty ? .error : .cached
+                return .none
+
+            case .binding:
                 return .none
             }
         }
