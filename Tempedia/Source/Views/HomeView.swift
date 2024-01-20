@@ -10,6 +10,7 @@ import SwiftUI
 
 struct HomeView: View {
     let store: StoreOf<HomeReducer>
+    @Namespace var animation
 
     var body: some View {
         NavigationStackStore(self.store.scope(state: \.path, action: \.path)) {
@@ -42,7 +43,9 @@ struct HomeView: View {
                 CaseLet(
                     \HomePathReducer.State.temtemList,
                     action: HomePathReducer.Action.temtemList,
-                    then: TemtemListView.init(store:)
+                     then: { store in
+                         TemtemListView.init(store: store, namespace: animation)
+                     }
                 )
             case .itemsList:
                 CaseLet(
@@ -69,6 +72,15 @@ struct HomeView: View {
                     then: TypesListView.init(store:)
                 )
             }
+        }
+        .overlay {
+            IfLetStore(store.scope(
+                state: \.temtemDetails,
+                action: HomeReducer.Action.temtemDetails
+            ),
+            then: { store in
+                TemtemDetailsView(store: store, namespace: animation)
+            })
         }
     }
 }

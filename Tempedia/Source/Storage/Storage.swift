@@ -43,7 +43,7 @@ extension Storage {
 
     static func saveTemtemImages(_ temtemImages: TemtemImages) {
         var allStoredTemtemImages: [TemtemImages] = get(.temtemImages) ?? []
-        var storedTemtemImages = allStoredTemtemImages.first { $0.name == temtemImages.name }
+        let storedTemtemImages = allStoredTemtemImages.first { $0.name == temtemImages.name }
 
         if var storedTemtemImages {
             storedTemtemImages.icon = temtemImages.icon

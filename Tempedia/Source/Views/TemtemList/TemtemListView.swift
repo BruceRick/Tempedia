@@ -9,11 +9,16 @@ import ComposableArchitecture
 import SwiftUI
 
 struct TemtemListView {
+    let store: StoreOf<TemtemListReducer>
     @ObservedObject var viewStore: ViewStoreOf<TemtemListReducer>
     @Environment(\.horizontalSizeClass) var sizeClass
 
-    init(store: StoreOf<TemtemListReducer>) {
+    var namespace: Namespace.ID
+
+    init(store: StoreOf<TemtemListReducer>, namespace: Namespace.ID) {
+        self.store = store
         self.viewStore = ViewStore(store, observe: { $0 })
+        self.namespace = namespace
     }
 }
 
@@ -58,25 +63,37 @@ extension TemtemListView: View {
     var listTemtems: some View {
         List {
             ForEach(viewStore.filteredTemtems) { temtem in
-                HStack {
-                    Text("#\(temtem.formattedNumber)")
-                        .frame(minWidth: 50)
-                    TemtemImageView(temtem: temtem)
-                        .aspectRatio(contentMode: .fit)
-                        .frame(width: 30, height: 30)
-                    Text(temtem.name)
-                    Spacer()
-                    ForEach(temtem.types, id: \.self) { type in
-                        if let data = viewStore.typeIcons[type],
-                           let image = UIImage(data: data) {
-                            Image(uiImage: image)
-                                .resizable()
-                                .frame(width: 30, height: 30)
-                        } else {
-                            Text(type)
+                Button(action: {
+                    viewStore.send(.didSelect(temtem), animation: .default)
+                }, label: {
+                    HStack {
+                        Text("#\(temtem.formattedNumber)")
+                            .frame(minWidth: 50)
+                        TemtemImageView(temtem: temtem)
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width: 30, height: 30)
+//                            .matchedGeometryEffect(id: "Image-\(temtem.name)",
+//                                                   in: namespace,
+//                                                   properties: [.frame, .position, .size])
+                        Text(temtem.name)
+                        Spacer()
+                        ForEach(temtem.types, id: \.self) { type in
+                            if let data = viewStore.typeIcons[type],
+                               let image = UIImage(data: data) {
+                                Image(uiImage: image)
+                                    .resizable()
+                                    .frame(width: 30, height: 30)
+                            } else {
+                                Text(type)
+                            }
                         }
                     }
-                }
+                    .contentShape(Rectangle())
+                })
+                .buttonStyle(.plain)
+//                .matchedGeometryEffect(id: "View-\(temtem.name)",
+//                                       in: namespace,
+//                                       properties: [.frame, .position, .size])
             }
         }
     }
@@ -113,9 +130,9 @@ private extension Temtem {
 }
 
 #Preview {
-  TemtemListView(
-    store: Store(initialState: TemtemListReducer.State()) {
-      TemtemListReducer()
-    }
-  )
+    TemtemListView(
+        store: Store(initialState: TemtemListReducer.State()) {
+            TemtemListReducer()
+        }, namespace: Namespace().wrappedValue
+    )
 }

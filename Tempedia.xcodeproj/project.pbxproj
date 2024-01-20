@@ -13,6 +13,8 @@
 		4B1593742B51E25400E8AB18 /* Type.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B1593732B51E25400E8AB18 /* Type.swift */; };
 		4B1593762B55D2B200E8AB18 /* TemtemImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B1593752B55D2B200E8AB18 /* TemtemImages.swift */; };
 		4B1593792B55D9A100E8AB18 /* TemtemImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B1593782B55D9A100E8AB18 /* TemtemImageView.swift */; };
+		4B15937C2B560F6B00E8AB18 /* TemtemDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B15937B2B560F6B00E8AB18 /* TemtemDetailsView.swift */; };
+		4B15937E2B560F7C00E8AB18 /* TemtemDetailsReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B15937D2B560F7C00E8AB18 /* TemtemDetailsReducer.swift */; };
 		4BADED302B50A4EB00E7D428 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BADED2F2B50A4EB00E7D428 /* HomeView.swift */; };
 		4BADED322B50A50700E7D428 /* HomeReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BADED312B50A50700E7D428 /* HomeReducer.swift */; };
 		4BADED352B50AEAF00E7D428 /* TemtemListReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BADED342B50AEAF00E7D428 /* TemtemListReducer.swift */; };
@@ -49,6 +51,8 @@
 		4B1593732B51E25400E8AB18 /* Type.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Type.swift; sourceTree = "<group>"; };
 		4B1593752B55D2B200E8AB18 /* TemtemImages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemtemImages.swift; sourceTree = "<group>"; };
 		4B1593782B55D9A100E8AB18 /* TemtemImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemtemImageView.swift; sourceTree = "<group>"; };
+		4B15937B2B560F6B00E8AB18 /* TemtemDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemtemDetailsView.swift; sourceTree = "<group>"; };
+		4B15937D2B560F7C00E8AB18 /* TemtemDetailsReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemtemDetailsReducer.swift; sourceTree = "<group>"; };
 		4BADED2F2B50A4EB00E7D428 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		4BADED312B50A50700E7D428 /* HomeReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeReducer.swift; sourceTree = "<group>"; };
 		4BADED342B50AEAF00E7D428 /* TemtemListReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemtemListReducer.swift; sourceTree = "<group>"; };
@@ -106,6 +110,15 @@
 			path = TemtemImage;
 			sourceTree = "<group>";
 		};
+		4B15937A2B560F5600E8AB18 /* TemtemDetails */ = {
+			isa = PBXGroup;
+			children = (
+				4B15937D2B560F7C00E8AB18 /* TemtemDetailsReducer.swift */,
+				4B15937B2B560F6B00E8AB18 /* TemtemDetailsView.swift */,
+			);
+			path = TemtemDetails;
+			sourceTree = "<group>";
+		};
 		4BADED2D2B50A42300E7D428 /* Source */ = {
 			isa = PBXGroup;
 			children = (
@@ -129,6 +142,7 @@
 				4BADED3A2B50B4B200E7D428 /* TechniquesList */,
 				4BADED3B2B50B4BC00E7D428 /* TypesList */,
 				4B1593772B55D98300E8AB18 /* TemtemImage */,
+				4B15937A2B560F5600E8AB18 /* TemtemDetails */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -355,6 +369,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4BADED472B50B51A00E7D428 /* TechniquesListView.swift in Sources */,
+				4B15937E2B560F7C00E8AB18 /* TemtemDetailsReducer.swift in Sources */,
 				4BADED372B50B0CE00E7D428 /* TemtemListView.swift in Sources */,
 				4BADED3F2B50B4E400E7D428 /* ItemsListView.swift in Sources */,
 				4B1593722B51D6E300E8AB18 /* MockData.swift in Sources */,
@@ -382,6 +397,7 @@
 				4BADED612B51BE6700E7D428 /* StorageDependency.swift in Sources */,
 				4B1593702B51D62800E8AB18 /* MockAPI.swift in Sources */,
 				4BADED412B50B4FA00E7D428 /* MovesListReducer.swift in Sources */,
+				4B15937C2B560F6B00E8AB18 /* TemtemDetailsView.swift in Sources */,
 				4B1593742B51E25400E8AB18 /* Type.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

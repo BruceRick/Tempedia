@@ -79,8 +79,7 @@ struct AppReducer {
             case .loadTypeImageReponse(let name, .success((let data, _))):
                 storage.storeTypeImage(name, data)
                 return .none
-            case .loadTypeImageReponse(_, .failure(let error)):
-                print(error)
+            case .loadTypeImageReponse(_, .failure):
                 return .none
             case .loadTypeImagesComplete:
                 state.typesNetworkState = .success

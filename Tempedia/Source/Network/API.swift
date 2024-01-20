@@ -20,7 +20,7 @@ public protocol API {
 
 extension API {
     public static func fullURL(endpoint: Endpoint) -> URL? {
-        URL(string: Self.baseURLString + endpoint.path)
+        URL(string: Self.baseURLString + endpoint.path)?.appending(queryItems: endpoint.queryItems)
     }
 }
 

@@ -13,4 +13,11 @@ struct Formatters {
         formatter.minimumIntegerDigits = 3
         return formatter
     }()
+
+    static var weaknesses: NumberFormatter = {
+        let formatter = NumberFormatter()
+        formatter.minimumFractionDigits = 1
+        formatter.maximumFractionDigits = 2
+        return formatter
+    }()
 }

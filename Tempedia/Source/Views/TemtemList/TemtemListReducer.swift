@@ -29,6 +29,7 @@ struct TemtemListReducer {
         case onAppear
         case loadTemtem
         case loadTemtemResponse(TaskResult<(data: [Temtem], response: URLResponse)>)
+        case didSelect(Temtem)
         case binding(BindingAction<State>)
     }
 
@@ -71,6 +72,9 @@ struct TemtemListReducer {
             case .loadTemtemResponse(.failure):
                 state.temtems = storage.getTemtem()
                 state.networkState = state.temtems.isEmpty ? .error : .cached
+                return .none
+
+            case .didSelect:
                 return .none
 
             case .binding:

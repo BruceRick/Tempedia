@@ -23,6 +23,18 @@ public enum Endpoint {
         }
     }
 
+    var queryItems: [URLQueryItem] {
+        switch self {
+        case .temtems:
+            return [
+                URLQueryItem(name: "expand", value: "traits, techniques"),
+                URLQueryItem(name: "weaknesses", value: "true")
+            ]
+        default:
+            return []
+        }
+    }
+
     var httpMethod: HTTPMethod {
         switch self {
         default:

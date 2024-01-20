@@ -11,24 +11,41 @@ import ComposableArchitecture
 struct HomeReducer {
     struct State: Equatable {
         var path = StackState<HomePathReducer.State>()
+        var temtemDetails: TemtemDetailsReducer.State?
     }
 
     enum Action {
         case path(StackAction<HomePathReducer.State, HomePathReducer.Action>)
+        case temtemDetails(TemtemDetailsReducer.Action)
     }
 
     var body: some Reducer<State, Action> {
-        Reduce { _, action in
+        Reduce { state, action in
             switch action {
             case let .path(action):
                 switch action {
+                case .element(id: _, action: .temtemList(.didSelect(let temtem))):
+                    state.temtemDetails = .init(temtem: temtem)
+                    return .none
+
                 default:
                     return .none
                 }
+
+            case .temtemDetails(.close):
+                state.temtemDetails = nil
+                return .none
+
+            case .temtemDetails:
+                return .none
             }
         }
         .forEach(\.path, action: \.path) {
             HomePathReducer()
+        }
+
+        .ifLet(\.temtemDetails, action: /Action.temtemDetails) {
+            TemtemDetailsReducer()
         }
     }
 }
